@@ -1,0 +1,11 @@
+java-src/java-multi-layer-lambda/.idea
+java-src/java-multi-layer-lambda/.idea/*
+java-src/java-multi-layer-lambda/.settings
+java-src/java-multi-layer-lambda/.settings/*
+java-src/java-multi-layer-lambda/.vscode
+java-src/java-multi-layer-lambda/.vscode/*
+java-src/java-multi-layer-lambda/lambda-handler/.settings
+java-src/java-multi-layer-lambda/lambda-handler/.settings/*
+java-src/java-multi-layer-lambda/shared-library/.settings
+java-src/java-multi-layer-lambda/shared-library/.settings/*
+

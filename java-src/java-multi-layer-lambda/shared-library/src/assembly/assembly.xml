@@ -1,0 +1,37 @@
+<assembly xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.3"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.3 http://maven.apache.org/xsd/assembly-1.1.3.xsd">
+
+    <!-- ID for this assembly -->
+    <id>lambda-layer</id>
+
+    <!-- Specifies the output format (in this case ZIP for Lambda layer) -->
+    <formats>
+        <format>zip</format>
+    </formats>
+
+    <!-- Directory to output the final assembly -->
+    <!-- <baseDirectory>/</baseDirectory> -->
+
+    <!-- Include all the dependencies as part of the layer -->
+    <dependencySets>
+        <dependencySet>
+            <outputDirectory>java/lib</outputDirectory>  <!-- All dependencies will go into the /lib directory -->
+            <useTransitiveDependencies>true</useTransitiveDependencies>  <!-- Include transitive dependencies -->
+            <unpack>false</unpack>  <!-- Don't unpack the JARs -->
+            <scope>runtime</scope>  <!-- Include only runtime dependencies -->
+        </dependencySet>
+    </dependencySets>
+
+    <!-- Include compiled classes from this module -->
+    <fileSets>
+        <fileSet>
+            <directory>${project.build.outputDirectory}</directory>  <!-- Include the compiled classes -->
+            <outputDirectory>/</outputDirectory>  <!-- Put them in the root of the archive -->
+            <includes>
+                <include>**/*.class</include>  <!-- Include all .class files -->
+            </includes>
+        </fileSet>
+    </fileSets>
+
+</assembly>
