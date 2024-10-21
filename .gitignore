@@ -8,4 +8,6 @@ java-src/java-multi-layer-lambda/lambda-handler/.settings
 java-src/java-multi-layer-lambda/lambda-handler/.settings/*
 java-src/java-multi-layer-lambda/shared-library/.settings
 java-src/java-multi-layer-lambda/shared-library/.settings/*
+java-src/java-multi-layer-lambda/lambda-handler/target/*
+java-src/java-multi-layer-lambda/shared-library/target/*
 
